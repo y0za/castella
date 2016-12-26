@@ -1,0 +1,12 @@
+[submodule "vendor/github.com/gorilla/websocket"]
+	path = vendor/github.com/gorilla/websocket
+	url = https://github.com/gorilla/websocket
+[submodule "vendor/github.com/hpcloud/tail"]
+	path = vendor/github.com/hpcloud/tail
+	url = https://github.com/hpcloud/tail
+[submodule "vendor/gopkg.in/fsnotify.v1"]
+	path = vendor/gopkg.in/fsnotify.v1
+	url = https://gopkg.in/fsnotify.v1
+[submodule "vendor/gopkg.in/tomb.v1"]
+	path = vendor/gopkg.in/tomb.v1
+	url = https://gopkg.in/tomb.v1
