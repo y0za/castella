@@ -1,0 +1,8 @@
+dependencies:
+  override:
+    - go get -u github.com/golang/lint/golint
+
+test:
+  override:
+    - for pkg in $(go list ./... | grep -v /vendor/); do golint $pkg; done
+    - go vet $(go list ./... | grep -v /vendor/)
