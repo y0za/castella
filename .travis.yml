@@ -1,0 +1,12 @@
+language: go
+
+go:
+  - 1.7
+
+install:
+  - go get -d -v -t ./...
+  - go get github.com/golang/lint/golint
+
+script:
+  - for pkg in $(go list ./... | grep -v /vendor/); do golint $pkg; done
+  - go vet $(go list ./... | grep -v /vendor/)
