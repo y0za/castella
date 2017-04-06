@@ -55,7 +55,7 @@ func (c *Client) writePump() {
 	}
 }
 
-func serveWs(hub *Hub, watcher *Watcher, w http.ResponseWriter, r *http.Request) {
+func serveWS(hub *Hub, watcher *Watcher, w http.ResponseWriter, r *http.Request) {
 	conn, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Println(err)

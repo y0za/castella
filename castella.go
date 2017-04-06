@@ -31,7 +31,7 @@ func main() {
 	go watcher.watch()
 
 	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
-		serveWs(hub, watcher, w, r)
+		serveWS(hub, watcher, w, r)
 	})
 	err = http.ListenAndServe(addr, nil)
 	if err != nil {
